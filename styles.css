@@ -1,0 +1,182 @@
+:root{
+  --primary:#00a9a4;
+  --primary-dark:#00807b;
+  --accent:#f4faf9;
+  --text:#0f262a;
+  --card-shadow: 0 14px 30px rgba(7,20,20,0.06);
+}
+
+/* Basic reset */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:"Poppins",sans-serif;color:var(--text);background:#fff;line-height:1.5}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.container{width:min(1200px,94%);margin:0 auto}
+
+/* Header */
+header{position:sticky;top:0;background:#fff;z-index:40;border-bottom:1px solid rgba(0,0,0,0.04)}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:12px 0}
+.logo{display:flex;gap:10px;align-items:center}
+.logo-circle{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--primary),#45dfd3);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.logo-text{font-weight:700;color:var(--primary-dark);font-size:1.25rem}
+nav.links{display:flex;gap:18px}
+.links a{font-weight:500;padding:8px;border-radius:8px}
+.cta{display:flex;gap:10px;align-items:center}
+
+/* Buttons */
+.btn-primary{padding:10px 14px;border-radius:10px;background:var(--primary);color:#fff;font-weight:600;display:inline-block}
+.btn-outline{padding:8px 12px;border-radius:10px;border:1px solid var(--primary);font-weight:600;display:inline-block}
+.btn-outline.small{padding:6px 8px;font-size:.92rem;border-width:1px}
+
+/* HERO */
+.hero{background: radial-gradient(circle at left top,#e6fbf9 0,#fff 45%);padding:40px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:6px 12px;border-radius:999px;background:#eafaf8;font-weight:600;color:var(--primary-dark);font-size:.82rem}
+h1{font-size:2.3rem;margin:14px 0 10px;line-height:1.06}
+.accent{color:var(--primary-dark)}
+.lead{max-width:540px;color:#315657}
+.hero-buttons{display:flex;gap:12px;margin-top:14px}
+.hero-features{margin-top:14px;color:#305854;font-weight:500;display:flex;gap:8px;flex-wrap:wrap}
+.hero-bottle{border-radius:20px;overflow:hidden;box-shadow:var(--card-shadow)}
+
+/* Sections */
+section{padding:40px 0}
+.section-header{text-align:center;margin-bottom:22px}
+.section-eyebrow{color:var(--primary-dark);font-weight:700;letter-spacing:.12em;text-transform:uppercase;font-size:.78rem}
+.section-title{font-size:1.55rem;margin-top:8px}
+.section-sub{color:#345b57;max-width:700px;margin:8px auto 0}
+
+/* Two columns helper */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;align-items:center}
+
+/* Pills */
+.pills{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.pill{background:#e7f6f3;padding:6px 10px;border-radius:999px}
+
+/* Products */
+.products-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.product-card{background:#fff;border-radius:14px;padding:12px;box-shadow:var(--card-shadow);text-align:center}
+.product-name{font-weight:700}
+.product-size{font-size:.9rem;color:#5b7f7a;margin-bottom:8px}
+
+/* Distributor */
+.distributor{background:linear-gradient(180deg,#f7fffe 0,#ffffff 100%)}
+.distributor-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:20px;align-items:start}
+.dist-info p{color:#365d59}
+.stats{display:flex;gap:12px;margin-top:16px;flex-wrap:wrap}
+.stat{background:#fff;padding:12px;border-radius:12px;box-shadow:var(--card-shadow);min-width:150px;text-align:center}
+.stat strong{display:block;font-size:1rem;color:var(--primary-dark)}
+.dealer-card{background:linear-gradient(135deg,#ffffff,#f0fffef0);padding:18px;border-radius:14px;box-shadow:var(--card-shadow)}
+.dealer-form input,.dealer-form select,.dealer-form textarea{width:100%;padding:9px;border-radius:10px;border:1px solid #d7e9e7;font-size:0.95rem;margin-top:6px}
+.dealer-form button{margin-top:10px;padding:10px;border-radius:10px;border:0;background:var(--primary);color:#fff;font-weight:600;cursor:pointer}
+.form-hint{font-size:.85rem;margin-top:8px;color:#4a7570}
+.full{width:100%}
+
+/* Info card */
+.info-card{background:#f4faf9;padding:14px;border-radius:12px}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 420px;gap:18px;align-items:start}
+.lead-box{background:#fff;padding:16px;border-radius:12px;box-shadow:var(--card-shadow)}
+.lead-box input,.lead-box textarea{width:100%;padding:9px;border-radius:8px;border:1px solid #e2efee;margin-top:8px}
+
+/* Footer */
+footer{background:#072023;color:#d7e4e4;padding:26px 0;margin-top:18px}
+.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px}
+.brand-row{display:flex;align-items:center;gap:10px}
+.logo-circle.small{width:36px;height:36px}
+.logo-text.light{font-weight:700;color:#f3ffff}
+.footer-desc{margin-top:8px;color:#b9c9ca;max-width:360px}
+.footer-heading{font-weight:700;margin-bottom:8px}
+.footer-link{display:block;color:#b9c9ca;margin-bottom:6px}
+.footer-cta{margin-top:8px}
+.copyright{text-align:center;margin-top:16px;color:#7f9597;font-size:.84rem}
+
+/* WhatsApp FAB */
+.whatsapp-fab{position:fixed;right:18px;bottom:18px;background:#35c76a;color:#fff;border-radius:999px;padding:14px 16px;display:flex;gap:10px;align-items:center;box-shadow:0 12px 30px rgba(3,79,50,0.18);z-index:60}
+.whatsapp-icon{width:20px;height:20px;flex-shrink:0}
+.whatsapp-text{font-weight:700}
+
+/* Responsive */
+@media(max-width:980px){
+  .hero-grid,.distributor-grid,.two-col{grid-template-columns:1fr}
+  .products-grid{grid-template-columns:repeat(2,1fr)}
+  nav.links{display:none}
+  .contact-grid{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .products-grid{grid-template-columns:1fr}
+  h1{font-size:1.7rem}
+  .whatsapp-fab{right:12px;bottom:12px;padding:10px 12px}
+}
+/* ===== Zuvia Chatbot styles ===== */
+/* Chatbot placed ABOVE WhatsApp */
+#zuvia-chat-root { 
+  position: fixed;
+  right: 18px;
+  bottom: calc(18px + 70px);  /* Lifts chat 70px above WhatsApp */
+  z-index: 99999;
+  font-family: "Poppins", sans-serif;
+}
+#zuvia-chat-toggle { display:flex; gap:8px; align-items:center; background:var(--primary); color:#fff; border:0; padding:10px 14px; border-radius:999px; box-shadow:0 12px 30px rgba(0,160,150,0.18); cursor:pointer; }
+#zuvia-chat-toggle svg{flex-shrink:0}
+#zuvia-chat-toggle span{font-weight:700}
+#zuvia-chat-window { width: 360px; max-width:calc(100vw - 36px); height: 480px; display:flex; flex-direction:column; border-radius:12px; overflow:hidden; box-shadow:0 30px 60px rgba(4,20,18,0.3); background:#fff; transform:translateY(16px); opacity:0; pointer-events:none; transition:opacity .22s ease, transform .22s ease; }
+#zuvia-chat-window[aria-hidden="false"] { transform:translateY(0); opacity:1; pointer-events:auto; }
+.z-chat-header { background: linear-gradient(90deg,var(--primary),var(--primary-dark)); color:#fff; padding:12px 14px; position:relative; }
+.z-chat-title { font-weight:700; font-size:1rem; }
+.z-chat-sub { font-size:0.82rem; opacity:0.9; margin-top:4px }
+#zuvia-chat-close{ position:absolute; right:8px; top:8px; background:transparent; color:#fff; border:0; font-size:18px; cursor:pointer; }
+
+.z-chat-body { padding:12px; overflow:auto; flex:1; background:linear-gradient(180deg,#f7fffe,#ffffff); display:flex; flex-direction:column; gap:10px; }
+.z-message { display:flex; width:100%; }
+.z-message.z-bot { justify-content:flex-start; }
+.z-message.z-user { justify-content:flex-end; }
+.z-msg-inner { max-width:78%; padding:9px 12px; border-radius:12px; line-height:1.35; font-size:0.95rem; }
+.z-message.z-bot .z-msg-inner { background:#e6fbf9; color:var(--text); border-bottom-left-radius:4px; }
+.z-message.z-user .z-msg-inner { background:var(--primary); color:#fff; border-bottom-right-radius:4px; }
+
+.z-typing { font-size:0.85rem; opacity:0.8; padding:6px 10px; background:transparent; color:#456; }
+
+.z-quick-replies { display:flex; gap:8px; flex-wrap:wrap; margin-top:4px }
+.z-qr { background:#fff; border:1px solid #e3f6f3; padding:6px 9px; border-radius:999px; cursor:pointer; font-size:0.85rem }
+
+.z-chat-footer { padding:10px; border-top:1px solid rgba(0,0,0,0.05); background:#fff }
+#zuvia-chat-form { display:flex; gap:8px; align-items:center }
+#zuvia-user-input { flex:1; padding:10px 12px; border-radius:999px; border:1px solid #e8f3f0; font-size:0.95rem }
+#zuvia-chat-form button { background:var(--primary); color:#fff; border:0; padding:10px 12px; border-radius:999px; cursor:pointer }
+
+/* small screens: make widget full-width bottom */
+@media (max-width:520px) {
+  #zuvia-chat-root { right: 12px; left: 12px; bottom: 12px; }
+  #zuvia-chat-window { width: auto; left:12px; right:12px; bottom: 12px; max-height:70vh; height:70vh; }
+  #zuvia-chat-toggle { padding:8px 10px }
+}
+/* WhatsApp floating button */
+.whatsapp-fab{
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: #25D366; /* WhatsApp green */
+  color: white;
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 0 8px 20px rgba(2,6,23,0.18);
+  z-index: 99999;
+  transition: transform .12s ease, box-shadow .12s ease, opacity .12s;
+  cursor: pointer;
+  user-select: none;
+}
+.whatsapp-fab:hover{ transform: translateY(-3px); box-shadow: 0 12px 26px rgba(2,6,23,0.22); }
+.whatsapp-fab .whatsapp-icon{ width:22px; height:22px; flex: 0 0 22px; display:block; }
+.whatsapp-fab .whatsapp-text{ font-weight:600; font-size:14px; display:inline-block; line-height:1; }
+@media (max-width:480px){
+  .whatsapp-fab{ right:12px; bottom:16px; padding:10px; gap:8px; }
+  .whatsapp-fab .whatsapp-text{ display:none; } /* hide text on very small screens if needed */
+}
+
+
