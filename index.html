@@ -186,7 +186,8 @@
 
         <div class="dealer-card">
           <h3>Apply for dealership / bulk supply</h3>
-          <form id="dealerForm" class="dealer-form" onsubmit="return sendDealerMail();">
+         <form id="dealerForm" class="dealer-form" onsubmit="submitDealerForm(event)">
+
             <label>Full Name*</label>
             <input id="d_name" name="d_name" type="text" required>
 
@@ -453,6 +454,36 @@ Message: ${msg}`;
   });
 })();
 </script>
+  <script>
+function submitDealerForm(e) {
+  e.preventDefault();
+
+  const formData = new FormData();
+  formData.append("name", document.getElementById("d_name").value.trim());
+  formData.append("mobile", document.getElementById("d_mobile").value.trim());
+  formData.append("city", document.getElementById("d_city").value.trim());
+  formData.append("interest", document.getElementById("d_interest").value);
+  formData.append("message", document.getElementById("d_message").value.trim());
+
+  fetch("https://zuviawater.com/api/save_dealer.php", {
+    method: "POST",
+    body: formData
+  })
+  .then(res => res.json())
+  .then(data => {
+    if (data.success) {
+      alert("✅ Dealership application submitted successfully!");
+      document.getElementById("dealerForm").reset();
+    } else {
+      alert("❌ " + data.error);
+    }
+  })
+  .catch(() => {
+    alert("❌ Server error. Please try again later.");
+  });
+}
+</script>
+
 
 </body>
 </html>
